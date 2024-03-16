@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -21,6 +22,7 @@ ul {
 
 a {
     text-decoration: none;
+    color: var(--black);
 }
 
 .df {
@@ -44,7 +46,7 @@ a {
     height: 2px;
     width: 90vw;
     background-color: #8A8A8A;
-    border-radius: 20px;
+    border-radius: 1.25rem;
 }
 
 #homepage {
@@ -52,21 +54,20 @@ a {
 }
 
 #section-1 {
-    height: 100vh;
+    height: 90vh;
 }
 
 #navbar {
     position: absolute;
     top: 45px;
-    height: 95px;
-    font-size: 30px;
+    font-size: 1.875rem;
     font-weight: 700;
     font-family: var(--font1);
     color: var(--black);
 }
 
 #navbar #main {
-    gap: 400px;
+    gap: 25vw;
 }
 
 #navbar #main #left {
@@ -101,6 +102,7 @@ a {
 
 #section-1 #heading {
     color: var(--black);
+    transform: translateY(10vh);
 }
 
 #section-1 #heading #top {
@@ -134,23 +136,25 @@ a {
     height: 840px;
     font-family: var(--font1);
     color: var(--black);
-    gap: 160px;
+    gap: 10vw;
     margin-bottom: 100px;
 }
 
 #section-2 #right #base {
-    width: 565px;
-    height: 703px;
-    border-radius: 114px;
+    width: 34.8vw;
+    height: 42.8vw;
+    border-radius: 7.125rem;
     border: 2px solid #8A8A8A;
 }
 
 #photo {
-    width: 507px;
-    height: 635px;
-    border-radius: 114px;
+    width: 30vw;
+    height: 38vw;
+    /* width: 31.688rem; */
+    /* height: 39.688rem; */
+    border-radius: 7.125rem;
     background-image: url('./images/dr-santosh.jpeg');
-    background-size: 700px;
+    background-size: 42vw;
     background-position: bottom center;
 }
 
@@ -190,7 +194,7 @@ a {
 }
 
 #section-3 #main {
-    gap: 140px;
+    gap: 10vw;
 }
 
 #section-3 h1,
@@ -198,12 +202,13 @@ a {
     font-size: 90px;
     font-family: var(--font3);
     font-weight: 700;
+    position: relative;
 }
 
 #section-3 #left,
 #section-3 #right {
     font-family: var(--font1);
-    width: 535px;
+    width: 33.438rem;
     gap: 22px;
 }
 
@@ -211,10 +216,12 @@ a {
     font-size: 40px;
     font-weight: 600;
     color: #555555;
+    position: relative;
 }
 
 #section-3 #holder1 {
     gap: 39px;
+    position: relative;
 }
 
 #section-3 #card {
@@ -222,13 +229,13 @@ a {
 }
 
 #section-3 #head {
-    font-size: 30px;
+    font-size: 1.875rem;
     font-weight: 700;
     font-family: var(--font2);
 }
 
 #section-3 p {
-    font-size: 30px;
+    font-size: 1.875rem;
     font-weight: 500;
     color: #8F8F8F;
 }
@@ -311,7 +318,7 @@ a {
 
 footer {
     height: 254px;
-    gap: 700px;
+    gap: clamp(1rem, 40vw, 50rem);
     font-size: 30px;
     font-weight: 500;
     font-family: var(--font1);
@@ -339,7 +346,7 @@ footer {
     opacity: 0.75;
     box-sizing: content-box;
     position: absolute;
-    top:85%;
+    top: 85%;
     animation: bounce 1.5s infinite;
     cursor: pointer;
     transition: 0.5s;
@@ -355,10 +362,10 @@ footer {
     animation-iteration-count: infinite;
 }
 
-.mousey span{
+.mousey span {
     position: absolute;
     bottom: -30px;
-    left:0px;
+    left: 0px;
     font-weight: 800;
     font-family: var(--font1);
 }
@@ -374,19 +381,40 @@ footer {
     }
 
     100% {
-        transform: translateY(15px);
+        transform: translateY(0.938rem);
         opacity: 0;
     }
 }
 
 @keyframes bounce {
-    0%{
+    0% {
         transform: translateY(0);
     }
-    20%{
-        transform: translateY(10px);
+
+    20% {
+        transform: translateY(0.625rem);
     }
-    100%{
+
+    100% {
         transform: translateY(0px);
+    }
+}
+
+@media screen and (max-width: 1248px) {
+    html{
+        font-size: 14px;
+    }
+    #navbar #main{
+        gap: 16rem
+    }
+    #section-3 #main{
+        gap:2vw;
+        text-align: center;
+    }
+    footer{
+        gap: 25vw;
+    }
+    #section-3 #head{
+        width: 40vw;
     }
 }
