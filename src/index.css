@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Truculenta:opsz,wght@12..72,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Tangerine:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --black: #343434;
+    --white: #FFFCFB;
+    --font1: 'Truculenta';
+    --font2: 'Comfortaa';
+    --font3: 'Tangerine';
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.df {
+    display: flex;
+}
+
+.df-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.jcc {
+    justify-content: center;
+}
+
+.aic {
+    align-items: center;
+}
+
+.line {
+    height: 2px;
+    width: 90vw;
+    background-color: #8A8A8A;
+    border-radius: 20px;
+}
+
+#homepage {
+    background-color: #FFFCFB;
+}
+
+#section-1 {
+    height: 100vh;
+}
+
+#navbar {
+    position: absolute;
+    top: 45px;
+    height: 95px;
+    font-size: 30px;
+    font-weight: 700;
+    font-family: var(--font1);
+    color: var(--black);
+}
+
+#navbar #main {
+    gap: 400px;
+}
+
+#navbar #main #left {
+    gap: 70px;
+}
+
+#navbar #main #right {
+    gap: 40px;
+}
+
+#navbar #logo {
+    position: relative;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+#navbar #logo span {
+    position: absolute;
+    top: 60px;
+    left: 0px;
+}
+
+#navbar #logo img {
+    height: 80px;
+    width: 80px;
+}
+
+#navbar #right img {
+    height: 40px;
+    width: 40px;
+}
+
+#section-1 #heading {
+    color: var(--black);
+}
+
+#section-1 #heading #top {
+    font-size: 120px;
+    font-family: var(--font3);
+    font-weight: 700;
+    transform: translateX(-40px);
+}
+
+#section-1 #heading {
+    line-height: 80px;
+}
+
+#section-1 #heading #main {
+    line-height: 80px;
+}
+
+#section-1 #heading #mid {
+    font-size: 120px;
+    font-weight: 700;
+    font-family: var(--font1);
+}
+
+#section-1 #heading #bot {
+    font-size: 60px;
+    font-weight: 400;
+    font-family: var(--font1);
+}
+
+#section-2 {
+    height: 840px;
+    font-family: var(--font1);
+    color: var(--black);
+    gap: 160px;
+    margin-bottom: 100px;
+}
+
+#section-2 #right #base {
+    width: 565px;
+    height: 703px;
+    border-radius: 114px;
+    border: 2px solid #8A8A8A;
+}
+
+#photo {
+    width: 507px;
+    height: 635px;
+    border-radius: 114px;
+    background-image: url('./images/dr-santosh.jpeg');
+    background-size: 700px;
+    background-position: bottom center;
+}
+
+#section-2 #heading {
+    font-weight: 700;
+    font-size: 25px;
+    color: gray;
+}
+
+#section-2 #con {
+    width: 428px;
+    font-weight: 600;
+    font-size: 30px;
+}
+
+#section-2 #left {
+    gap: 97px;
+}
+
+#section-2 #text {
+    gap: 12px;
+}
+
+#section-2 #connect {
+    gap: 2px;
+}
+
+#section-2 #connect img {
+    height: 70px;
+    width: 70px;
+}
+
+#section-3 {
+    height: 801px;
+    gap: 90px;
+    color: var(--black);
+}
+
+#section-3 #main {
+    gap: 140px;
+}
+
+#section-3 h1,
+#section-4 h1 {
+    font-size: 90px;
+    font-family: var(--font3);
+    font-weight: 700;
+}
+
+#section-3 #left,
+#section-3 #right {
+    font-family: var(--font1);
+    width: 535px;
+    gap: 22px;
+}
+
+#section-3 h2 {
+    font-size: 40px;
+    font-weight: 600;
+    color: #555555;
+}
+
+#section-3 #holder1 {
+    gap: 39px;
+}
+
+#section-3 #card {
+    line-height: 35px;
+}
+
+#section-3 #head {
+    font-size: 30px;
+    font-weight: 700;
+    font-family: var(--font2);
+}
+
+#section-3 p {
+    font-size: 30px;
+    font-weight: 500;
+    color: #8F8F8F;
+}
+
+#section-4 {
+    height: 801px;
+    gap: 67px;
+    color: var(--black)
+}
+
+#section-4 #main {
+    gap: 130px;
+}
+
+#section-4 h2 {
+    font-size: 40px;
+    font-family: var(--font1);
+    font-weight: 600;
+    color: #555555;
+}
+
+#section-4 img {
+    width: 70px;
+    height: 70px;
+}
+
+#section-4 ul {
+    gap: 11px;
+}
+
+#section-4 ul span {
+    font-size: 40px;
+    font-size: 40px;
+    font-family: var(--font1);
+    font-weight: 600;
+}
+
+#section-4 ul li:nth-child(1) {
+    background: linear-gradient(to bottom left, rgba(50, 49, 199, 1) 0%, rgba(114, 40, 173, 1) 15%, rgba(177, 30, 147, 1) 40%, rgba(219, 26, 88, 1) 66%, rgba(244, 124, 34, 1) 93%, rgba(239, 153, 34, 1) 100%);
+    background-clip: text;
+    color: transparent;
+}
+
+#section-4 ul li:nth-child(2) {
+    color: #78A0CF;
+}
+
+#section-4 ul li:nth-child(3) {
+    color: #127AD8;
+}
+
+#section-4 #left {
+    gap: 22px;
+}
+
+#section-4 #right {
+    gap: 22px;
+}
+
+#section-4 #contact {
+    gap: 40px;
+}
+
+#section-4 #contact div {
+    line-height: 30px;
+}
+
+#section-4 h3 {
+    font-size: 30px;
+    font-weight: 700;
+    font-family: var(--font2);
+}
+
+#section-4 p {
+    font-size: 30px;
+    font-weight: 500;
+    font-family: var(--font1);
+    color: #8F8F8F;
+}
+
+footer {
+    height: 254px;
+    gap: 700px;
+    font-size: 30px;
+    font-weight: 500;
+    font-family: var(--font1);
+    color: #626262;
+}
+
+.scroll-downs {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+
+    width: 34px;
+    height: 55px;
+}
+
+.mousey {
+    width: 3px;
+    padding: 10px 15px;
+    height: 35px;
+    border: 2px solid var(--black);
+    border-radius: 25px;
+    opacity: 0.75;
+    box-sizing: content-box;
+    position: absolute;
+    top:85%;
+    animation: bounce 1.5s infinite;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.scroller {
+    width: 3px;
+    height: 10px;
+    border-radius: 25%;
+    background-color: var(--black);
+    animation-name: scroll;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+.mousey span{
+    position: absolute;
+    bottom: -30px;
+    left:0px;
+    font-weight: 800;
+    font-family: var(--font1);
+}
+
+@keyframes scroll {
+    0% {
+        opacity: 0;
+    }
+
+    10% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(15px);
+        opacity: 0;
+    }
+}
+
+@keyframes bounce {
+    0%{
+        transform: translateY(0);
+    }
+    20%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
