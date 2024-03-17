@@ -106,7 +106,7 @@ a {
 }
 
 #section-1 #heading #top {
-    font-size: 120px;
+    font-size: 7.5rem;
     font-family: var(--font3);
     font-weight: 700;
     transform: translateX(-40px);
@@ -121,23 +121,22 @@ a {
 }
 
 #section-1 #heading #mid {
-    font-size: 120px;
+    font-size: 7.5rem;
     font-weight: 700;
     font-family: var(--font1);
 }
 
 #section-1 #heading #bot {
-    font-size: 60px;
+    font-size: 3.75rem;
     font-weight: 400;
     font-family: var(--font1);
 }
 
 #section-2 {
-    height: 840px;
     font-family: var(--font1);
     color: var(--black);
     gap: 10vw;
-    margin-bottom: 100px;
+    margin-bottom: 150px;
 }
 
 #section-2 #right #base {
@@ -188,7 +187,8 @@ a {
 }
 
 #section-3 {
-    height: 801px;
+    margin-bottom: 150px;
+    margin-top: 150px;
     gap: 90px;
     color: var(--black);
 }
@@ -199,7 +199,7 @@ a {
 
 #section-3 h1,
 #section-4 h1 {
-    font-size: 90px;
+    font-size: 5.625rem;
     font-family: var(--font3);
     font-weight: 700;
     position: relative;
@@ -241,7 +241,7 @@ a {
 }
 
 #section-4 {
-    height: 801px;
+    margin: 150px 0px 150px 0px;
     gap: 67px;
     color: var(--black)
 }
@@ -401,20 +401,94 @@ footer {
 }
 
 @media screen and (max-width: 1248px) {
-    html{
+    html {
         font-size: 14px;
     }
-    #navbar #main{
+
+    #navbar #main {
         gap: 16rem
     }
-    #section-3 #main{
-        gap:2vw;
+
+    #section-3 #main {
+        gap: 2vw;
         text-align: center;
     }
-    footer{
+
+    footer {
         gap: 25vw;
     }
-    #section-3 #head{
+
+    #section-3 #head {
         width: 40vw;
     }
+}
+
+@media screen and (max-width: 960px) {
+    html {
+        font-size: 18px;
+    }
+
+    #section-1 #heading #mid {
+        font-size: 5.5rem;
+    }
+
+    #section-1 #heading #top {
+        font-size: 5.5rem;
+    }
+
+    #section-1 #heading #bot {
+        font-size: 1.75rem;
+    }
+
+    #section-2 {
+        margin-top: 100px;
+    }
+
+    #navbar #main {
+        gap: 1px;
+    }
+
+    #section-3 p {
+        width: 80vw;
+        font-size: 1.5rem;
+    }
+
+    #section-3 #head {
+        width: 80vw;
+    }
+
+    #section-3 #main {
+        gap: 100px;
+        flex-direction: column;
+    }
+
+    #section-2 #right #base {
+        width: 44.8vw;
+        height: 52.8vw;
+        border-radius: 5rem;
+        border: 2px solid #8A8A8A;
+    }
+
+    #photo {
+        width: 40vw;
+        height: 48vw;
+        border-radius: 5rem;
+        background-image: url('./images/dr-santosh.jpeg');
+        background-size: 52vw;
+        background-position: bottom center;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #section-3 h1,
+    #section-4 h1 {
+        /* font-size: clamp(1rem, ); */
+        font-size: 12vw;
+    }
+}
+
+@media screen and (max-width: 620px) {
 }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import acrologo from '../images/acropolis.png'
 import simpleInsta from '../images/icons8-instagram.svg'
 import simpleLinkedin from '../images/icons8-linkedin.svg'
@@ -56,6 +56,23 @@ export default function HomePage() {
       margin: '0px 0px -600px 0px'
     }
   }
+
+  const [mobile, setMobile] = useState(false);
+
+  document.title = 'Geeta Santhosh'
+
+  useEffect(() => {
+    function handleResize() {
+      setMobile(window.innerWidth <= 960);
+    }
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <div id='homepage' className='df-col jcc aic'>
       <motion.div id='section-1' className='df jcc aic'
@@ -156,7 +173,7 @@ export default function HomePage() {
           <span>Scroll</span>
         </div>
       </motion.div>
-      <motion.div id="section-2" className='df jcc aic'
+      <motion.div id="section-2" className={`${mobile ? 'df-col' : 'df'} jcc aic`} style={{ flexDirection: mobile ? 'column-reverse' : '' }}
         initial={{
           opacity: 0
         }}
@@ -213,7 +230,7 @@ export default function HomePage() {
           whileInView='inView'
           viewport='viewport'
         ></motion.div>Education and Experience</h1>
-        <div className='df jcc' id='main'>
+        <div className={`df jcc`} id='main'>
           <div id='left' className='df-col jcc aic'>
             <h2><motion.div
               variants={blackOut}
@@ -230,11 +247,11 @@ export default function HomePage() {
                 whileInView='inView'
                 viewport='viewport'
               ></motion.div>
-              <div className='df-col jcc' id='card'>
+              <div className={`df-col jcc ${mobile?'aic':''}`} id='card'>
                 <div id='head'>Master of Computer Application</div>
                 <p>Devi Ahilya Vishwavidyalaya</p>
               </div>
-              <div className='df-col jcc' id='card'>
+              <div className={`df-col jcc ${mobile?'aic':''}`} id='card'>
                 <div id='head'>Pursuing Ph.D, Computer Science</div>
                 <p>Bharathiar University</p>
               </div>
@@ -256,11 +273,11 @@ export default function HomePage() {
                 whileInView='inView'
                 viewport='viewport'
               ></motion.div>
-              <div className='df-col jcc' id='card'>
+              <div className={`df-col jcc ${mobile?'aic':''}`} id='card'>
                 <div id='head'>Acropolis Institute of Technology and Research</div>
                 <p>Current Head Of Department - 17+ years.</p>
               </div>
-              <div className='df-col jcc' id='card'>
+              <div className={`df-col jcc ${mobile?'aic':''}`} id='card'>
                 <div id='head'>SSN College of Engineering</div>
                 <p>Associate Professor MCA Dept. - 13 years 6 mos.</p>
                 <p>Asst. Professor MCA Dept. - 6 years 9 mos.</p>
@@ -302,7 +319,7 @@ export default function HomePage() {
                 whileInView='animate'
                 transition={{ delay: 0.1 }}
                 viewport='viewport'>
-                  
+
                 <h3>Phone</h3>
                 <p>+91 1234567890</p>
               </motion.div>
@@ -311,7 +328,7 @@ export default function HomePage() {
                 whileInView='animate'
                 transition={{ delay: 0.2 }}
                 viewport='viewport'>
-                  
+
                 <h3>Email</h3>
                 <p>acro@gmail.com</p>
               </motion.div>
